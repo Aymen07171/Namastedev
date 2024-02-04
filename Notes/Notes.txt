@@ -1,0 +1,450 @@
+
+Namaste React JS  Dev : Learn Programming 
+
+Emmet 
+
+async & Defer are boolean attribue 
+
+when you load a web page two things happenning : 
+
+Parsing HTML 
+Loading of the script contain two parts : 
+
+fetching the script from the network 
+and executing the script line by line 
+
+There's two types of fetching script and loading a page quickly : 
+
+asyn attribute : 
+it's help to load a webpage but it dosen't maintain the order of the scripts so
+if there's some dependent scripts it will not work as it should 
+
+Defer atteribute : 
+
+maintain the order execution of the code 
+
+
+why webpage know javascript code because a webpage contain JavaScript engine 
+
+
+CDN React : 
+CDN  React where react project is hosted and when we use CDN React Links we import React Library and use it in our project
+
+
+crossorigin : 
+The crossorigin attribute in HTML is used when loading external resources
+with default value anonymous (The browser does not include any credentials (such as cookies or HTTP authentication) with the request.)
+
+
+For React Link CDN Contain two files :
+
+first link is the core of React & second link is for react dom that mean is handle 
+all the operation and interacting with the dom
+
+
+You can use createElement insted of JSX 
+
+createElement('h1', {}, child1, child2, child3)
+To create an element without JSX, call createElement with some type, props, and children
+in React.createElement if you want to add more children you need to convert the third to an array 
+
+
+React element is just a normal javascript object 
+
+
+
+ReactElement(Object ) ==> HTML (Browser)
+
+so for example when we use a HTML tag and we make some changes in our app using react js 
+so if the HTML contain content it will be replaced by React Js Code 
+
+
+why React Js is Library : 
+because React works in small portion in your app like we can for example work in some HTML tags or some independent code 
+in otherwise why we call it library because when we install React js we need to install another packages
+so it'sn't give us the full pack in other hand vue.js is Framework
+
+
+There's a diffrence beteween a git and Github  : 
+Git allow developers to track changes in their source code and enbales multiple developers to work on a project & also git operate
+
+Github in other hand is just website where we upload put in our repositories 
+
+
+Github Repositories for NamasteDev  : 
+https://github.com/namastedev/namaste-react
+
+Ignitting Our App : 
+There's a lot packages that must be installed bundled together in order to make React App
+that make React App fast & scalable 
+
+NPM 
+npm (it'sn't stand for  : Node Package Manager )
+npm manage packages so any package you need in your projects you can use npm (package Manager)
+
+Package.json 
+package.json is configuration file  for npm 
+
+The project is dependent in a lot of extern packages and those packages stand for Dependencies 
+
+
+What's the Bundler in React js : 
+
+The primary purpose of bundlers is to optimize the loading of web pages by reducing the number of requests made to the server
+
+
+Behind a npx create-react-app : 
+ Webpack is a module bundler that is commonly used in React Application 
+Webpack takes all these separate files, including your React components, their dependencies, stylesheets, and other assets, and bundles them together.
+
+There's two dependencies that need to be installed one is normal Dependencies & second is Dev Dependencies 
+
+so the deference beteween Dev Dpensensies & Normal Dependencies : 
+
+Dev Dependencies used to in the developement phase in otherswise normal dependencies used in 
+production phase 
+
+
+
+-- What's The Diffrence beteween tilde & caret : 
+
+Tilde (~): Allows only patch-level changes. Best for projects that are more sensitive to backward-compatible bug fixes.
+
+Caret (^): Allows backward-compatible updates, including new features and bug fixes. Best for projects that can accommodate new features without breaking changes.
+
+It's Ok to use Caret to update the Minor Version & but it's not normal to Upgrade the Major Version 
+
+Minor Upgrade : 2.8.3  => 2.8.4 > 
+Major Upgrade : 2.8.3 => 3.0.0  > 
+
+
+--- What's the diffrence beteween package.json & package-lock.json  : 
+
+package.json : is file that contain a configuration for NPM and Keep a track for the version and package that installed in Our System(Project)
+
+package-lock.json : is file that keep a track the exact version that has been installed 
+
+
+Node Modules : is code's files  that has been feteched from the bundler(Parcel) into our Project & we considered as database contains all the packages 
+
+--- Why Node Modules is too heavy : 
+
+when we install a bundler(webPack,Parcel,vite) has his own dependencies and those dependencies also has his own dependencies also we call this as Transitive Dependencies
+
+
+
+--- Why we don't Need to push node_modules to our repository (github) : 
+If you have package.json & package-lock.json you can recreate the node-modules 
+when you put it on github
+
+
+-- Should i put package.json & package-lock.json into git : 
+Answer : 
+yes,because those packages helps us to recreate the node_modules 
+so the reason when you execute  "npm install" they create a node_modules 
+
+
+-- Igniting Our App using the command : npx parcel index.html
+
+
+--- src  (sourc code ) : is directory name in React app helps to organized & separates the actual code 
+      from configuration & other build scripts.
+
+--- package.json file contains various configuration settings, dependencies, scripts.
+
+--- scripts : scripts are essentially shortcuts for running commonly used tasks in your project
+
+
+--  npx and npm are both part of the Node.js ecosystem,  Npm is used to manage & install & distribute the Node js packages but npx is used to execute Node js packages
+
+so the diffrent beteween install local package & global packages : 
+
+when you install package gloabally (npm install -g packageName) so that means you can execute 
+the package from any directory without specifying the path
+
+in otherwise local packages you need to execute the packages with specifying the path (npm install packageName)
+
+At the end of the day React is just a package (piece of code ), it's also hosted over npm
+
+
+when we use import in our component so we use import to import packages from node_modules 
+either React or some other packages 
+
+
+--- what's the diffrence beteween Module File Js & Normal Js File : 
+
+ The most obvious difference is the syntax. ES6 Modules use import and export, while CommonJS uses require and module.exports.
+
+
+--- What Parcel do ( web application bundler) : 
+
+  Dev Build 
+Local Server 
+HMR = Hot Module Replacement 
+Parcel Provide changes in real-time using File Watching Algorithm - Written in C++
+Caching - Faster Builds : Parcel uses caching to speed up the build process by avoiding unnecessary reprocessing of files
+
+ Image Optimization 
+Minification 
+Bundling 
+Consistent Hashing  : Parcel generates a content hash for each processed file based on its contents. This hash is used to uniquely identify the file's content. If a file's content hasn't changed since the last build, Parcel can use the cached result instead of reprocessing the file
+
+Differential Bundling : Support Older Browsers  ---- parcel take in control to bundle the app for diffrents browsers 
+
+Diagnostic 
+
+Error Handling 
+HTTPs
+Tree Shaking - Remove unused code (for example : if you have 50 functions and you just use 5 functions so parcel will removed all the unused functions )
+
+Different dev and prod Bundles
+
+----- What's Hot Module Replacement (HMR) : 
+Parcel provides built-in support for Hot Module Replacement, enabling you to see the changes you make in real-time without needing to manually refresh the page.
+
+
+-- What's the entry point in parcel : 
+the file from which a bundler like Parcel begins its process of analyzing and bundling the dependencies of a web application.
+
+ the entry point is the initial file that triggers the bundling process, and it defines the root of the dependency graph for your web application.
+
+
+---- What's Transpilation : 
+Transpilation is the process of converting source code written in one programming language version to another, often to an older version or a more widely supported version.
+
+
+---- Globs to Match Files: 
+"Globs" are patterns that you can use to match filenames or paths. For example, *.js is a glob pattern that matches all JavaScript files in a directory.
+
+
+A "target" is a specific environment or platform for which you want to build your code. This could be the frontend of a web application, the backend server
+
+the concept of "target" allows you to organize and customize your build process for different environments or platforms within a single project.
+
+--- What dist folder serves in our project using parcel : 
+`dist folder` serves as the output directory for the bundled and compiled files. 
+
+the dist folder provides a clean separation between development and production-ready code
+
+--- Should we put `dist` & `parcel-cache` into gitignore file : 
+yes we should put them into gitignore in oder to prevent to commit them in our github repository 
+
+--- Why don't need them to push the files to github repository : 
+Because we already have so official files that we can help us to regenrate them 
+
+--- If you don't know how to execute a project so go to package.json & try to scripts section and try to execute the script
+
+
+----  React.createElement : it's an object & when we render in DOM it becoms to HTML
+
+
+--- JSX isn't part of React each one is diffrent : 
+We can make a web app or anything without using JSX & in other hand jsx is just freindly syntax 
+that helps developers 
+
+--- In other hand React comes to solve the problem and merge HTML (The Skeleton) & Javascript(Logic) in one file
+
+JSX isn't HTML by the way it's an HTML Like syntax
+
+--- is we writting code for Humans or Machines : 
+Both Humans & Machines but the first is Human because the code that we write must to be readable by Human and second is Machine
+
+ JSX (Transpiled before it reaches the JS)  so the responsible for Transpaling the code is Parcel 
+but exactly is Babel
+
+---- What's Babel : 
+Babel is a JavaScript compiler that allows developers to write code using the latest ECMAScript (ES) syntax and features, and then transpile it into an older version of JavaScript that is compatible with most browsers and environments. 
+
+---- what's happend behind the scences and How the babel transpilte the JSX : 
+
+so The Babel convert jsx into React.createElement =>  ReactElement JS Object => HTMLElement (render)
+
+If you want to give an attribute to JSX,you have to use camelCase
+
+----- What's Component : 
+There's two types of Components : 
+Class Based Componenet -- OLD way of writing a Code
+
+Functional Component : is just a normal js function (Name it with Capital Letter) 
+& functional Component is function that return a piece of jsx code 
+
+
+---- What's Component Compisition : 
+Compoent compisition is a component inside a component 
+
+you can use React Element inside function Component & also Function Component inside React Element 
+
+
+JSX is prevent the end user from Malicious attack like running 
+some scripts behind the backgrounds 
+
+----- what makes React app faster and readble : because we use JSX
+
+
+
+----------------------------- Food Ordering App : NamastePizza ------------------------------- 
+
+Props : 
+--- when you have to dynamically passing data to a componenent,you're passing as props
+
+--  Config-driven UI is a technique that allows you to create user interfaces based on a configuration file, such as JSON, or a TypeScript file that defines the layout and content of the UI components
+
+
+
+The optional chaining (?.) operator accesses an object's property or calls a function. If the object accessed or function called using this operator is undefined or null, the expression short circuits and evaluates to undefined instead of throwing an error.
+
+
+--- ! Important to use Key : 
+when you use map function must to use key in order to organize because react render everything dosen't know about the key so for that we should use the Key 
+
+not using keys (not acceptable)
+
+
+Best Practices is to make seperate files for sperate component and we use (export/import) to render our component 
+
+
+---why we use a Framework or Library UI : 
+using a framework or UI Library is make your developer exprience easy 
+
+
+whenever you have any hard code data in React js never keep it in your component 
+file
+
+all the files that just use them as utilities we type them with small capital word and 
+& Component with Big Capital
+
+
+There's two  types of export /import : 
+
++ Default Export/Import 
+
+export default Component 
+import Component from "path"
+
++ Named Export/Import 
+
+export const Component 
+import {Component} from "path"
+
+------ What is the difference between default and named exports?
+
+
+
+---- Hooks are normal javascript function  (Normal Js Utility Functions)
+
+--- useState() : Superpowerful State Variable in React : (It's already named export useState ) 
+--- useEffect()
+
+-- whenever state variable update,React reredner the component 
+
+React use Reconciliation Algorithm & also known as (React Fiber)
+
+Virtual DOM : is a representation of actual DOM 
+
+
+---------------- React Fiber -------------------
+
+React Fiber is a new implementation of React's core algorithm, which aims to improve the performance and user experience of complex React applications
+
+Incremental rendering
+Concurrency
+Fiber nodes
+Fiber tree
+
+Reconciliation Algorithm (React Fiber invented in React16)
+
+
+Fiber Focuses on animations & Responsiveness
+
+Diff Algorithm : is an algorithm that calculated the difference beteween the old vdom
+and nvdom 
+
+
+
+React Fiber is a reimplementation of the stack & also is a unit of concurrency 
+
+
+Reconciliation
+The algorithm React uses to diff one tree with another to determine which parts need to be changed.
+
+Reconciliation is the algorithm behind what is popularly understood as the "virtual DOM." 
+
+
+The reason it can support so many targets is because React is designed so that reconciliation and rendering are separate phases.
+
+
+scheduling
+the process of determining when work should be performed.
+
+work
+any computations that must be performed. Work is usually the result of an update 
+
+
+------- Why React is fast : 
+     React is fast because it used an efficient manipulation DOM
+   
+React is one of the libraries that uses the VDOM concept to create and update the UI. React has its own algorithm for reconciliation
+
+
+OLD Reconciler : Stack 
+
+Stack was synchronous
+Worked like a stack 
+Had to work until the "stack" was empty 
+
+Stack was synchronous and that was a problem 
+
+
+
+
+
+React Fiber had two phases : Fiber : Unit of work 
+
+Render Phase : 
+The first (render) phase is asynchronous
+Commit Phase 
+The second (commit) phase is synchronous 
+
+
+
+we mean that it is a new implementation of the React core algorithm. It is not a modification of the existing algorithm, but rather a new version that is designed to improve the performance of React applications 
+
+
+
+
+------------------------- --------------------------- --------------------------------  -
+
+Monolithic Architecture & Microservice Architecture : 
+
+monolithic architecture, the software application is built as a single, self-contained unit that is tightly coupled and interdependent. This means that all the components of the application are interconnected and run on the same server. A change in one component requires the entire application to be rebuilt and redeployed, which can be time-consuming and complex. On the other hand, in a microservices architecture, the application is broken down into smaller, independent services that can be developed, deployed, and scaled independently. Each service is responsible for a specific business capability and communicates with other services through well-defined APIs. This makes it easier to develop, test, deploy, and scale the application, as well as to make changes to individual services without affecting the entire application.
+
+
+This Microservices known also as speration concerns & you can also have differents 
+stack for diffrent services 
+and also each service has his own port 
+
+----- useEffect(Callback function,Depenncey Array)
+useEffect is a React Hook that lets you synchronize a component with an external system, such as fetching data, setting up subscriptions, or manipulating the DOM.
+
+Fetch is function created by browser's team to retrieve  the data
+
+
+
+-------------- ---------- ------------ -------------- -   ---------------   -----------
+
+Cors : (Cross Origin ressource sharing) 
+Web content’s origin is a concept used in web development to define the “location” of a web resource.
+
+
+*********** ----------------------------------------------------------------- ***********
+
+Optional Chaining : 
+Optional chaining, represented by ?. in JavaScript, is a feature introduced in ES2020. It provides a way to simplify accessing values through connected objects when there’s a possibility that a reference or function may be undefined or null.
+
+
+The ?. operator functions similarly to the . chaining operator, except instead of causing an error if a reference is null or undefined, the expression short-circuits with a return value of undefined.
+
+Shimmer UI: A Better Way to Show Loading States
+
+Better UX : 
+Loads => Render  => API => Render
