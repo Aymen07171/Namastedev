@@ -1,12 +1,17 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import logo from '../Images/logoipsum.svg'
+import { Link } from 'react-router-dom';
+
+
 export const Header = () => {
 
 
 
     const [btnName,setBtnName] = useState("Login");
-    
 
+    useEffect(() => {
+    
+    },[])
 
     return (
         <div className="header">
@@ -17,16 +22,19 @@ export const Header = () => {
 
             <div className="nav_item">
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact </li>
+                    <li>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li >
+                        <Link to="/about">About </Link>
+                    </li>
+                    <li>
+                        <Link to="/contact">Contact</Link>
+                    </li>
                     <li>Cart</li>
                     <button className='ButtnCardheader' onClick={() => { btnName === "Login" ?  setBtnName("Logout") : setBtnName("Login") }}>{btnName}</button>
                 </ul>
-
             </div>
-
-
         </div>
 
     )

@@ -1,276 +1,481 @@
-*{
-    margin: 0;
-    font-family: Roboto, sans-serif;
-}
-.logo_container{
-    padding-left: 20px;
-    cursor: pointer;
-}
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
 
-.header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-   padding: 20px 0 20px 0;
-    background-color: #bb4907;
-    color: wheat;
+            *{
+                    /* margin: 0; */
+                    font-family: Roboto, sans-serif;
+                }
 
-}
+                .body {
+                    padding-bottom: 130px; 
+                }
 
-.nav_item ul{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    list-style: none;
-    padding-right: 40px;
-}
+                .footer {
+                    
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    color: #333; /* Change text color as needed */
+                    text-align: center;
+                }
+                .logo_container{
+                    padding-left: 20px;
+                    cursor: pointer;
+                }
 
+                .header{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                padding: 20px 0 20px 0;
+                    background-color: #bb4907;
+                    color: wheat;
 
-.res_container {
-    display: flex;
-    flex-wrap: wrap;
-    
-}
+                }
 
-.imgrescard{
-    border-radius: 2rem;
-    box-shadow: 0px 5px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1),
-    0px 5px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1),
-    0px 5px 15px -3px rgba(0,0,0,0.1);
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
+                .nav_item ul{
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    list-style: none;
+                    padding-right: 40px;
+                    
+                }
 
-.rescard {
-    margin-left: 50px;
-    margin-top: 80px;
-    width: 16rem;
-    height: 8rem;
-    padding: 0px 0px 50px 0px;
-    margin-bottom: 10px;
-}
-
-/* HTML: <div class="loader"></div> */
-/* .loader {
-    width: 100px;
-    margin: 250px 0px 100px 570px ;
-    aspect-ratio: 1;
-    display: grid;
-    border: 4px solid #0000;
-    border-radius: 50%;
-    border-right-color: #bb4907;
-    animation: l15 1s infinite linear;
-
-  }
-  .loader::before,
-  .loader::after {    
-    content: "";
-    grid-area: 1/1;
-    margin: 2px;
-    border: inherit;
-    border-radius: 50%;
-    animation: l15 2s infinite;
-  }
-  .loader::after {
-    margin: 8px;
-    animation-duration: 3s;
-  }
-  @keyframes l15{ 
-    100%{transform: rotate(1turn)}
-  } */
+                .nav_item ul a {
+                    text-decoration: none;
+                    color: white;
+                }
 
 
+                .res_container  {
+                    display: flex;
+                    flex-wrap: wrap;
+                
+                    }
+                    .res_container a{
+                        text-decoration: none;
+                        color: black;
+                    }
 
-.search {
-    display: flex;
-    width: 400px;
-    height: 35px;
-    align-items: center;
-    margin-top: 30px;
-    border-radius: 2rem;
-    padding: 10px;
-    background-color: #fff;
-    margin-left: 30%;
-    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1),
-    0px 10px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1),
-    0px 10px 15px -3px rgba(0,0,0,0.1);
-}
+                .imgrescard{
+                    border-radius: 2rem;
+                    box-shadow: 0px 5px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1),
+                    0px 5px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1),
+                    0px 5px 15px -3px rgba(0,0,0,0.1);
+                    margin-bottom: 10px;
+                    margin-top: 10px;
+                }
 
-.search-box{
-    width: 500px;
-    padding: 10px;
-    border-radius: 2rem;
-    font: inherit;
-    border: 0;
-    outline: 0;
-    border-radius: 5em;
-    box-sizing: border-box;
-}
+                .rescard {
+                    margin-left: 50px;
+                    margin-top: 80px;
+                    width: 16rem;
+                    height: 8rem;
+                    padding: 0px 0px 50px 0px;
+                    margin-bottom: 10px;
+                    transition: transform 0.3s ease; 
+                }
 
-.searchBtn{
-    margin-left: 230px;
-    background-color: #f59158; /* Green */
-    border: none;
-    cursor: pointer;
-    color: white;
-    padding: 10px 20px 10px 20px;
-    text-align: center;
-    font-size: 15px;
-    border-radius: 2rem;
+                .rescard:hover {
+                    transform: scale(1.1); /* Zoom in effect on hover */
+                    cursor: pointer;
+                }
 
-}
+                /* HTML: <div class="loader"></div> */
+                /* .loader {
+                    width: 100px;
+                    margin: 250px 0px 100px 570px ;
+                    aspect-ratio: 1;
+                    display: grid;
+                    border: 4px solid #0000;
+                    border-radius: 50%;
+                    border-right-color: #bb4907;
+                    animation: l15 1s infinite linear;
 
-/* .errormsg {
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 3px 3px 3px 3px;
-    color: #D8000C;
-    background-color: #FFBABA;
-} */
+                }
+                .loader::before,
+                .loader::after {    
+                    content: "";
+                    grid-area: 1/1;
+                    margin: 2px;
+                    border: inherit;
+                    border-radius: 50%;
+                    animation: l15 2s infinite;
+                }
+                .loader::after {
+                    margin: 8px;
+                    animation-duration: 3s;
+                }
+                @keyframes l15{ 
+                    100%{transform: rotate(1turn)}
+                } */
 
 
 
-.input_card{
-    background-color: white;
-    border: none;
-    outline: none;
-}
+                .search {
+                    /* display: flex; */
+                    width: 400px;
+                    height: 35px;
+                    align-items: center;
+                    margin-top: 30px;
+                    border-radius: 2rem;
+                    padding: 10px;
+                    background-color: #fff;
+                    margin-left: 30%;
+                    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1), 0px 10px 15px -3px rgba(0,0,0,0.1),
+                                0px 10px 15px -3px rgba(0,0,0,0.1), 0px 10px 15px -3px rgba(0,0,0,0.1),
+                                0px 10px 15px -3px rgba(0,0,0,0.1);
+                }
+                
+                .search:hover,
+                .search:focus {
+                    border: none;
+                    outline: none;
+                }
+                
 
-.input_card:hover,
-.input_card:focus {
-    background-color: white;
+                .searchBtn{
+                    margin-left: 20px;
+                    background-color: #bb4907; /* Green */
+                    border: none;
+                    cursor: pointer;
+                    color: white;
+                    padding: 10px 20px 10px 20px;
+                    text-align: center;
+                    font-size: 15px;
+                    border-radius: 2rem;
 
-}
+                }
 
-
-.rescard img{
-    width: 200px;
-    margin-left: 20px;
-    
-}
-
-.TitleCard{
-    text-align: center;
-    top:100px;
-}
-
-.DescripCard{
-    width: 200px;
-    text-align: center;
-    padding: 10px;
-}
-
-
-.ButtnCardheader {
-    background-color: #f59158; /* Green */
-    border: none;
-    cursor: pointer;
-    color: white;
-    margin: 0px 20px 0px 20px;
-    padding: 10px 20px 10px 20px;
-    text-align: center;
-    font-size: 15px;
-    border-radius: 2rem;
-}
-
-
-.ButtnCard{
-    background-color: #bb4907; /* Green */
-    border: none;
-    color: white;
-    padding: 10px 25px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 12px;
-    border-radius: 2rem;
-    margin-top: -80px;
-    margin-left: 10rem;
-}
+                /* .errormsg {
+                    margin: 10px 0;
+                    padding: 10px;
+                    border-radius: 3px 3px 3px 3px;
+                    color: #D8000C;
+                    background-color: #FFBABA;
+                } */
 
 
 
+                .input_card{
+                    background-color: white;
+                    border: none;
+                    outline: none;
+                }
+
+                .input_card:hover,
+                .input_card:focus {
+                    background-color: white;
+
+                }
 
 
-.ratingCard {
-    display: flex;
-    width: 200px;
-    color: black;
-    font-weight: bold;
-    margin-top: 10px;
-    margin-left: 20px;
+                .rescard img{
+                    width: 200px;
+                    margin-left: 20px;
+                    
+                }
 
-}
+                .TitleCard{
+                    text-align: center;
+                    top:100px;
+                    font-size: 15px;
+                }
 
-.ratingCard img {
-    width: 15px;
-    height: 15px;
-}
-.ratingCard span {
-    margin-right: 10px; /* Adjust the margin as needed */
-}
-
-.timeCard {
-    margin-left: 10px; /* Adjust the margin as needed */
-    
-}
+                .DescripCard{
+                    width: 200px;
+                    text-align: center;
+                    padding: 10px;
+                }
 
 
-.priceCard{
-    width: 200px;
-    color: rgb(126, 125, 125);
-    font-size: 15px;
-    font-weight: normal;
-    margin-top: 15px;
-    margin-left: 30px;
-}
+                .ButtnCardheader {
+                    background-color: #e46d29; /* Green */
+                    border: none;
+                    cursor: pointer;
+                    color: white;
+                    margin: 0px 20px 0px 20px;
+                    padding: 10px 20px 10px 20px;
+                    text-align: center;
+                    font-size: 15px;
+                    border-radius: 2rem;
+                }
 
 
-/* -------------------  Filter Button --------------------  */
-
-.filter-btn{
-    background-color: #bb4907; /* Green */
-    border: none;
-    color: white;
-    cursor: pointer;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 12px;
-    border-radius: 2rem;
-    margin-top:40px;
-    margin-left: 60px;
-}
-
-
-/*------------------ Shimmmer UI ------------------------------------- */
-
-.shimmer-container{
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 100px;
-}
-
-
-.shimmer-cards{
-    margin-left: 70px;
-    margin-top: 70px;
-    width: 230px;
-    height: 100px;
-    padding: 0px 0px 50px 0px;
-    border-radius: 2rem;
-    background-color: rgb(248, 245, 245);
-} 
-
-
-.shimmer-child {
-    width: 170px;
-    height: 10px;
-    margin-left: 25px;
-    margin-top: 170px;
-    border-radius: 2rem;
-    background-color: rgb(248, 245, 245);
-}
+                .ButtnCard{
+                    background-color: #bb4907; /* Green */
+                    border: none;
+                    color: white;
+                    padding: 10px 25px;
+                    text-align: center;
+                    text-decoration: none;
+                    font-size: 12px;
+                    border-radius: 2rem;
+                    margin-top: -80px;
+                    margin-left: 10rem;
+                }
 
 
 
 
+
+                .ratingCard {
+                    display: flex;
+                    width: 200px;
+                    color: black;
+                    font-weight: bold;
+                    margin-top: 10px;
+                    margin-left: -20px;
+
+                }
+
+                .ratingCard img {
+                    width: 15px;
+                    height: 15px;
+                }
+                .ratingCard span {
+                    margin-right: 10px; /* Adjust the margin as needed */
+                }
+
+                .timeCard {
+                    margin-left: 10px; /* Adjust the margin as needed */
+                    font-size: 15px;
+                    
+                    
+                }
+
+
+                .priceCard{
+                    width: 10px;
+                    color: rgb(126, 125, 125);
+                    font-size: 15px;
+                    font-weight: normal;
+                    margin-top: 2px;
+                    margin-left: 30px;
+                }
+
+
+                /* -------------------  Filter Button --------------------  */
+
+                .filter-btn{
+                    background-color: #bb4907; /* Green */
+                    border: none;
+                    color: white;
+                    cursor: pointer;
+                    padding: 10px 20px;
+                    text-align: center;
+                    text-decoration: none;
+                    font-size: 12px;
+                    border-radius: 2rem;
+                    margin-top:40px;
+                    margin-left: 60px;
+                }
+
+                .filter-btn:hover{
+                    background-color: #f58925;
+                    cursor: pointer;
+                }
+
+
+                /*------------------ Shimmmer UI ------------------------------------- */
+
+                .shimmer-container{
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-top: 100px;
+                }
+
+
+                .shimmer-cards{
+                    margin-left: 70px;
+                    margin-top: 70px;
+                    width: 230px;
+                    height: 100px;
+                    padding: 0px 0px 50px 0px;
+                    border-radius: 2rem;
+                    background-color: rgb(248, 245, 245);
+                } 
+
+
+                .shimmer-child {
+                    width: 170px;
+                    height: 10px;
+                    margin-left: 25px;
+                    margin-top: 170px;
+                    border-radius: 2rem;
+                    background-color: #f8f5f5;
+                }
+
+
+
+
+                /*--------------------------------- Menu Items --------------------------------------------- */
+
+
+                .menu{
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 100px;
+                }
+
+
+                .name_menu {
+                    margin-left: 300px;
+                    font-size: 20px;
+                }
+
+                .cuisine_container{
+                    margin-left: 300px;
+                }
+
+                .rating_menu {
+                    display: flex;
+                    align-items:center;
+                    /* margin-right: 100px; */
+                    width: 30px;
+                    height: 5px;
+                    margin-left: 60%;
+                    margin-top: -70px;
+                    gap: 5px;
+                    padding: 30px;
+                    color: white;
+                    background-color:#e5e5e5;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    border-radius: 10px;
+                }
+
+                .rating_menu:hover{
+                    background-color:#d4d4d4;
+                    cursor: pointer;
+                }
+
+
+
+
+                .rating_menu img{
+                    width: 15px;
+                    height: 15px;
+                }
+
+                .line {
+                    width: 600px;
+                    margin: 30px 0px 0px 300px;
+                    align-items: center;
+                    border-bottom: 0.5px dotted black; /* You can adjust the color and thickness as needed */
+                }
+                
+
+
+
+                /*-------------------  ----------------  Card Details --------------------------------------- */
+
+                .cardinfo_display{
+                    display: flex;
+                    flex-direction: row;
+                    margin-left: 250px;
+                }
+
+
+
+                .cardinfo_details {
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    margin-left: 10px;
+                    margin-top: 10px;
+                    padding: 10px;
+                    background-color: #f9f9f9;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                    width: 200px; /* Adjust width as needed */
+                }
+                
+                .cardinfo_details:hover {
+                    background-color: #e5e5e5;
+                    cursor: pointer;
+                }
+                
+                .cardheader {
+                    font-size: 16px;
+                    font-weight: bold;
+                    margin: 0;
+                }
+                
+                .cardcoupon {
+                    font-size: 14px;
+                    color: #666;
+                }
+
+
+            /*  ---------------------- Item-List ---------------------------------------  ---------- */
+
+            .menu_carditems {
+                padding-top: 40px;
+                margin-left: 250px;
+                
+            }
+            
+            .item_card_list {
+                display: block;
+                list-style-type: none;
+                padding: 10px;
+
+
+            
+            }
+            
+            .item_card_name {
+                font-weight: bold;
+                margin-right: 700px;/* Center align the text */
+                padding-top: 50px;
+            }
+            
+            .item_card_price,
+            .item_card_descript {
+            margin-right: 600px;
+            font-weight: normal;
+                /* Center align the text */
+                padding: 10px;
+                width: 400px;
+            }
+            
+            .item_card_list img {
+                margin-left: 600px;
+                display: inline-block;
+                border-radius: 10px;
+                margin-top: -100px;
+                transition: transform 0.3s ease; 
+            }
+
+            .item_card_list img:hover{
+                transform: scale(1.1); /* Zoom in effect on hover */
+                cursor: pointer;
+            }
+            
+            .line_item{
+                
+                width: 800px;
+
+
+            }
+
+            .item_card_button  {
+                margin-left: 600px;
+                margin-bottom: 30px;
+                border: 0.5px solid #ccc;
+                border-radius: 15px;
+                padding: 15px;
+                padding-right: 40px;
+                text-align: center;
+                margin-top: -10px;
+            }
+
+            .item_card_button p{
+                margin-left: 20px;
+            }
+
+            .item_card_button:hover,
+            .item_card_button:active {
+                background-color: #ee6b00;
+                cursor: pointer;
+            }
